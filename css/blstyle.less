@@ -10,9 +10,13 @@
 //
 @shadeBackground: rgba(0, 0, 0, 0.8);
 
-@navBackground: rgba(0, 0, 0, 0.6);
+@navBackground: transparent;
+@navBackgroundAlt: rgba(0, 0, 0, 0.8); 
 @navBackgroundSolid: #222;
-@navText: #ccc;
+@navText: #eee;
+@navTextHover: @darkTextColor;
+@navTextAlt: @lightTextColor;
+@navTextHoverAlt: @darkTextColor;
 @navHeight: 75px;
 @navHeightMed: 65px;
 @navHeightSmall: 65px;
@@ -253,6 +257,19 @@ object {
     font-weight: @light;
 
     background-color: @navBackground;
+    transition: background-color 0.15s;
+
+    &.alt-colors {
+        background-color: @navBackgroundAlt;
+
+        ul li a {
+            color: @navTextAlt;
+
+            &:hover {
+                color: @navTextHoverAlt;
+            }
+        }
+    }
 
     #nav-menu {
         position: relative;
@@ -305,7 +322,7 @@ object {
                 transition: all 0.15s;
             }
             a:hover {
-                color: #222;
+                color: @navTextHover;
                 background-color: @navText;
                 //color: lighten(@navText, 30%);
                 //background-color: #222;

@@ -1,4 +1,4 @@
-﻿var $cache = $('.stickyPanel');
+﻿/*var $cache = $('.stickyPanel');
 var navHeight = $('.top-bar').height() + 20;
 var distance = $cache.offset().top;
 var scrollThreshold = distance - navHeight;
@@ -30,3 +30,19 @@ function fixDiv() {
 }
 $(window).scroll(fixDiv);
 fixDiv();
+*/
+
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        var top = $(window).scrollTop();
+        var scrollThreshold = $('#welcomeSection').height();
+        if(top >= scrollThreshold) {
+            $('#navigation').toggleClass('alt-colors', true);
+        }
+        else {
+            $('#navigation').toggleClass('alt-colors', false);
+        }
+    });
+
+    $(window).scrollTop();
+});
