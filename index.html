@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
@@ -301,41 +301,14 @@
     </footer>
   
     <script src="js/foundation.min.js"></script>
-    <script src="js/jscripts.js"
     <script type='application/javascript' src='js/fastclick.js'></script>
+    <script src="js/jscripts.js"></script>
   
     <script>
         $(document).foundation();
 
         $(document).ready( function() {
-
-        	FastClick.attach(document.body);
-
-        	/*
-        	$(document).on( 'click', function(event) {
-        		//event.preventDefault();
-        		if($(event.target).is('#nav-menu'))
-        			$('#offcanvas-navigation').toggleClass( 'on' );
-        		else if(!$(event.target).closest('#navigation').length)
-        			$('#offcanvas-navigation').toggleClass( 'on', false );
-        	});
-*/
-
-        	
-
-
-        	
-        	$('#nav-menu').click( function(e){
-        		e.preventDefault();
-        		$('#offcanvas-navigation').toggleClass( 'on' );
-        		$('#body-shade').toggleClass('on');
-        	});
-
-        	$('#body-shade').click( function(e){
-        		e.preventDefault();
-        		$('#offcanvas-navigation').toggleClass( 'on' );
-        		$('#body-shade').toggleClass('on');
-        	});
+            FastClick.attach(document.body);
         });
     </script>
 
