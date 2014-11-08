@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  margin-top: 400px;
 }
 object {
   width: 100%;
@@ -19,6 +20,18 @@ object {
     transform: translate(100px, 100px);
   }
 }
+.text-centered {
+  text-align: center;
+}
+.text-heavy {
+  font-weight: 600;
+}
+.text-light {
+  font-weight: 300;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
 .inline-list {
   list-style-type: none;
   animation: body-move 3s ease infinite;
@@ -29,6 +42,18 @@ object {
 .inline-list li a {
   display: block;
   width: 100%;
+}
+.fixed-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+.fixed-section.fullscreen {
+  height: 100%;
+  bottom: 0;
 }
 .heading.center {
   text-align: center;
@@ -253,18 +278,30 @@ object {
   right: 50px;
   margin-left: 0;
 }
-#welcomeSection {
-  width: 100%;
-  background-color: none;
-  margin-top: 75px;
+#welcome {
+  background-color: #333333;
 }
-#welcomeSection .row {
+#welcome .content {
+  display: block;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#welcome .content h1 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#welcome .row {
   height: 500px;
 }
-#welcomeSection .heading {
+#welcome .heading {
   padding-top: 75px;
 }
-#welcomeSection .heading h1 {
+#welcome .heading h1 {
   color: #eee;
 }
 @media only screen and (max-width: 640px) {

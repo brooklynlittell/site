@@ -21,9 +21,11 @@
 @navHeightMed: 65px;
 @navHeightSmall: 65px;
 
+@welcomeHeight: 400px;
+
 @footerHeight: 45px;
 
-@welcomeColor: none;
+@welcomeColor: #333;
 @porfolioColor: #2F519F;
 @resumeColor: #2F519F; //#EE8732;
 @aboutColor: #EE8732; //#EE3233;
@@ -89,6 +91,7 @@ body {
     //top: 0;
     //left: 0;
     font-family: @openSans;
+    margin-top: @welcomeHeight;
     //animation: move 3s ease infinite;
 }
 
@@ -119,6 +122,23 @@ object {
 
 
 //
+// Text
+//
+.text-centered {
+    text-align: center;
+}
+.text-heavy {
+    font-weight: @heavy;
+}
+.text-light {
+    font-weight: @light;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+
+//
 // Classes
 //
 .inline-list {
@@ -132,6 +152,21 @@ object {
             display: block;
             width: 100%;
         }
+    }
+}
+
+.fixed-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+
+
+    &.fullscreen {
+        height: 100%;
+        bottom: 0;
     }
 }
 
@@ -431,15 +466,26 @@ object {
 
 
 
-
-
-
-
-#welcomeSection {
-    .section();
+#welcome {
     background-color: @welcomeColor;
-    
-    margin-top: @navHeight;
+
+    .content {
+        display: block;
+        height: @welcomeHeight;
+
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        h1 {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
 
     .row {
         height: 500px;

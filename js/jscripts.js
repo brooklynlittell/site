@@ -35,7 +35,7 @@ fixDiv();
 $(document).ready(function() {
     $(window).on('scroll', function() {
         var top = $(window).scrollTop();
-        var scrollThreshold = $('#welcomeSection').height();
+        var scrollThreshold = $('#welcome').height();
         if(top >= scrollThreshold) {
             $('#navigation').toggleClass('alt-colors', true);
         }
