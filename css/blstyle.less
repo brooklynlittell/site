@@ -82,14 +82,31 @@
     width: 100%;
 }
 
+.vertical-center() {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.vertical-center-parent() {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.vertical-center {
+    .vertical-center();
+}
+.vertical-center-parent {
+    .vertical-center-parent();
+}
+
 
 //
 // Element overrides
 //
 body {
-    //position: relative;
-    //top: 0;
-    //left: 0;
     font-family: @openSans;
     margin-top: @welcomeHeight;
     //animation: move 3s ease infinite;
@@ -472,18 +489,6 @@ object {
     .content {
         display: block;
         height: @welcomeHeight;
-
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-
-        h1 {
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
     }
 
 
