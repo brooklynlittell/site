@@ -8,11 +8,11 @@
 //
 // VARIABLES
 //
-@darkColor: #252525;
+@darkColor: #1d1e20;//#252525;
 @darkColorTransparent: rgba(37, 37, 37, 0.8); //37,37,37 is #252525
-@lightColor: #eee;
-@primaryColor: #00A7B6;
-@secondaryColor: #FFAD00;
+@lightColor: #ecf0f0;//eee;
+@primaryColor: #4383c1;//#00A7B6;
+@secondaryColor: #2bb462;//#FFAD00;
 
 
 @shadeBackground: rgba(0, 0, 0, 0.8);
@@ -215,9 +215,14 @@ button, .button {
 .round {
     .borderRadius(50%);
 }
+.rounded {
+    .borderRadius();
+}
 
 .section {
     width: 100%;
+    position: relative;
+    z-index: 5;
 
     .content {
         display: block;
@@ -541,12 +546,21 @@ button, .button {
 }
 
 
+#particles {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: @welcomeHeight;
+    z-index: -10;
+    background-color: @welcomeColor;
 
+    canvas {
+        //z-index: -10;
+    }
+}
 
 
 #welcome {
-    background-color: @welcomeColor;
-    //background-image: url('../images/patterns/3.png');
 
     .content {
         height: @welcomeHeight;
@@ -557,7 +571,10 @@ button, .button {
     }
 
     canvas {
-        margin-top: -@welcomeHeight;
+        position: fixed;
+        top: 0;
+        z-index: -10;
+        //margin-top: -@welcomeHeight;
         height: @welcomeHeight;
     }
 }

@@ -46,18 +46,18 @@
 });
 
 /* config dom id (optional) + config particles params */
-particlesJS('welcome', {
+particlesJS('particles', {
   particles: {
-    color: '#0f0',
+    color: '#4383c1',
     shape: 'circle', // "circle", "edge" or "triangle"
     opacity: 1,
     size: 2.5,
-    size_random: false,
+    size_random: true,
     nb: 100,
     line_linked: {
       enable_auto: true,
-      distance: 40,
-      color: '#fff',
+      distance: 100,
+      color: '#444',
       opacity: 1,
       width: 1,
       condensed_mode: {
