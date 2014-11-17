@@ -42,6 +42,21 @@
         hideMobileNav();
     });
 
+    var navigationScroll = function(e) {
+        e.preventDefault();
+        var id = $(e.currentTarget).attr('href');
+        var $dest = $(id);
+
+        $('html,body').animate({
+          scrollTop: ($dest.offset().top - $('#navigation').height())
+        }, 200);
+    }
+
+
+    $('#navigation a').on('click', function (e) {
+        navigationScroll(e);
+    });
+
     $(window).scrollTop();
 });
 
