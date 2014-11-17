@@ -1,5 +1,16 @@
 ﻿$(document).ready(function() {
 
+    var hideMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on', false);
+        $('#body-shade').toggleClass('on', false);
+        $('#nav-menu').toggleClass('on', false);
+    };
+    var toggleMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on');
+        $('#body-shade').toggleClass('on');
+        $('#nav-menu').toggleClass('on');
+    };
+
     // Navigation fade
     $(window).on('scroll', function() {
         var top = $(window).scrollTop();
@@ -12,17 +23,72 @@
         }
     });
 
+    // Mobile Nav Show/Hide
     $('#nav-menu').click( function(e){
         e.preventDefault();
-        $('#offcanvas-navigation').toggleClass( 'on' );
-        $('#body-shade').toggleClass('on');
+        toggleMobileNav();
     });
 
+    // Mobile Nav Hide
     $('#body-shade').click( function(e){
         e.preventDefault();
-        $('#offcanvas-navigation').toggleClass( 'on' );
-        $('#body-shade').toggleClass('on');
+        hideMobileNav();
+    });
+
+    $('#offcanvas-navigation a').click( function(e) {
+        //console.log(e.target.hash);
+        //e.preventDefault();
+        //$(window).scrollTo(e.target.hash, 20);
+        hideMobileNav();
     });
 
     $(window).scrollTop();
+});
+
+/* config dom id (optional) + config particles params */
+particlesJS('welcome', {
+  particles: {
+    color: '#0f0',
+    shape: 'circle', // "circle", "edge" or "triangle"
+    opacity: 1,
+    size: 2.5,
+    size_random: false,
+    nb: 100,
+    line_linked: {
+      enable_auto: true,
+      distance: 40,
+      color: '#fff',
+      opacity: 1,
+      width: 1,
+      condensed_mode: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 600
+      }
+    },
+    anim: {
+      enable: true,
+      speed: 1
+    }
+  },
+  interactivity: {
+    enable: false,
+    mouse: {
+      distance: 250
+    },
+    detect_on: 'canvas', // "canvas" or "window"
+    mode: 'grab',
+    line_linked: {
+      opacity: .5
+    },
+    events: {
+      onclick: {
+        enable: false,
+        mode: 'push', // "push" or "remove" (particles)
+        nb: 4
+      }
+    }
+  },
+  /* Retina Display Support */
+  retina_detect: true
 });

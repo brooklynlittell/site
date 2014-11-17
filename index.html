@@ -19,20 +19,19 @@
 </head>
 <body>
 
-	<div id="test-animate"></div>
-
 	<div id="body-shade"></div>
-
+    
     <div id="navigation">
         <div class="row">
             <div class="large-4 medium-4 columns">
-            	<a href="#" id="nav-menu" alt="Menu"><span></span></a>
                 <a href="#" class="logo"><img src="images/brandonLittell.png" /></a>
+                <a href="#" id="nav-menu" alt="Menu"><span></span></a>
             </div>
             <div class="large-8 medium-8 columns hide-for-small">
                 <ul class="inline-list right">
-                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About Me</a></li>
+                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#footer">Contact</a></li>
                     <li><a href="http://brandonlittell.com/blog">Blog</a></li>
                 </ul>
@@ -42,8 +41,9 @@
 
     <div id="offcanvas-navigation" class="hide-for-medium-up">
     	<ul>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About Me</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#footer">Contact</a></li>
             <li><a href="http://brandonlittell.com/blog">Blog</a></li>
         </ul>
@@ -51,56 +51,87 @@
 
 
     <a name="welcome"></a>
-    <div id="welcome" class="fixed-section">
-        <div class="content vertical-center-parent">
+    <div id="welcome" class="section fixed">
+        
+        
+        <div class="content vertical-center-parent" style="margin-top: -3px;">
+        
             <div class="vertical-center text-centered">
                 <h1 class="text-heavy">Hi, I'm Brandon Littell</h1>
                 <h3>Software Engineer</h3>
             </div>
             
         </div>
+
+
     </div>
 
 
-    <!--
     <a name="portfolio"></a>
-    <div id="portfolioSection">
+    <div id="portfolio" class="section">
         <div class="row">
             <div class="large-12 columns">
-                <div class="heading center">
-                    <h1>Portfolio</h1>
-                    <h2>Code Thang</h2>
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">Portfolio</h1>
                 </div>
-                
-                <ul id="portfolioGrid" class="large-block-grid-3 small-block-grid-1 imageList">
-                    <li><a class="imageListItem" href="#"><span><h3>Project-192</h3></span><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Just Press Play</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Pinball</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Modoku</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Boom Boom Cowboy</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Fluxometry</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Test</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Test</h3><img src="http://placehold.it/500x300" /></a></li>
+
+                <ul class="portfolio-list">
+                    <li>
+                        <div class="title">
+                            <div class="vertical-center">
+                                <span class="text-heavy">Just Press Play</span>
+                            </div>
+                            
+                        </div>
+                        <div class="description">
+                            <p class="vertical-center">College achievement system</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    -->
+
+
+    <a name="about"></a>
+    <div id="about" class="section">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">About Me</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-3 medium-3 columns">
+                <div class="vertical-align-parent">
+                    <img src="images/PP-Rainier.jpg" class="round vertical-align"/>
+                </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+                <p>Hello! My name is Brandon and I’m a Game Design &amp; Development student at Rochester Institute of Technology (RIT). I strive to write software that leaves a positive impact on people through play or utility. I continuously push myself to work in new situations and environments so I can challenge my abilities and become more versatile.</p>
+                
+                <p>My spare time is usually consumed by reading programming blogs and tech news, but I’m rarely hesitant to get away from the keyboard. I enjoy a variety of activities ranging from playing soccer to mixing music to amateur photography. My favorite break is when I grab a cup of coffee with a friend to discuss a coding problem.</p>
+
+                <p>Send me a message using the options below!</p>
+            </div>
+        </div>
+    </div>
 
 
     <a name="resume"></a>
-    <div id="resumeSection">
+    <div id="resume" class="section">
         <div class="row">
             <div class="large-12 columns">
 
-                <div class="heading center">
-                    <h1>Resume</h1>
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">Resume</h1>
                 </div>
 
                 <div class="resume">
 
                     <div class="section">
-                 		<h2>Skills</h2>
+                 		<h3>Skills</h3>
     	                <p><strong>Languages:</strong> C++, C#, JavaScript, D, Java, HTML5, CSS3, Objective-C, MySQL</p>
     					<p><strong>Software:</strong> Visual Studio, Sublime, Git, dub, Xcode, SVN, Eclipse, UDK, Unity, Photoshop, Maya</p>
     					<p><strong>Libraries &amp; Frameworks:</strong> jQuery, OpenGL 4, DirectX 11, XNA, Foundation, ASP.NET MVC4, Box2D</p>
@@ -108,7 +139,7 @@
 
 
                     <div class="section">
-                        <h2>Recent Projects</h2>
+                        <h3>Recent Projects</h3>
 
                         <div class="row">
                             <div class="medium-8 columns">
@@ -167,7 +198,7 @@
 
                     
                     <div class="section">
-    					<h2>Work Experience</h2>
+    					<h3>Work Experience</h3>
 
 						<p><em>Microsoft Corperation, Redmond, WA</em></p>
     					<div class="row">
@@ -175,7 +206,7 @@
     							<p><strong>Software Development Engineer Intern</strong></p>
     						</div>
     						<div class="medium-4 columns">
-    							<p class="right"><strong>June 2014 - Current</strong></p>
+    							<p class="right"><strong>June 2014 - August 2014</strong></p>
     						</div>
     					</div>
     					<ul>
@@ -227,7 +258,7 @@
 
 
                     <div class="section">
-    					<h2>Education</h2>
+    					<h3>Education</h3>
     					<p><em>Rochester Institute of Technology, Rochester, NY</em><p>
     					<div class="row">
     						<div class="medium-8 columns">
@@ -256,28 +287,11 @@
 
 
 
-    <a name="about"></a>
-    <div id="aboutSection">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="heading center">
-                    <h1>About Me</h1>
-                    <h2></h2>
-                </div>
-                
-                <p>Hello! My name is Brandon and I’m a Game Design &amp; Development student at Rochester Institute of Technology (RIT). I strive to write software that leaves a positive impact on people through play or utility. I continuously push myself to work in new situations and environments so I can challenge my abilities and become more versatile.</p>
-                
-                <p>My spare time is usually consumed by reading programming blogs and tech news, but I’m rarely hesitant to get away from the keyboard. I enjoy a variety of activities ranging from playing soccer to mixing music to amateur photography. My favorite break is when I grab a cup of coffee with a friend to discuss a coding problem.</p>
-
-                <p>Send me a message using the options below!</p>
-                
-            </div>
-        </div>
-    </div>
+    
 
 
     <a name="footer"></a>
-    <footer id="footer-section">
+    <footer id="footer" class="section">
         <div class="row">
 
             <div class="large-8 medium-8 small-12 columns">
@@ -302,7 +316,9 @@
   
     <script src="js/foundation.min.js"></script>
     <script type='application/javascript' src='js/fastclick.js'></script>
+    <script src="js/particles.min.js"></script>
     <script src="js/jscripts.js"></script>
+    
   
     <script>
         $(document).foundation();
