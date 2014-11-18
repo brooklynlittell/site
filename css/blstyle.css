@@ -215,7 +215,7 @@ button:hover,
   transition: background-color 0.15s;
 }
 #navigation.alt-colors {
-  background-color: rgba(37, 37, 37, 0.8);
+  background-color: rgba(29, 30, 32, 0.85);
 }
 #navigation.alt-colors ul li a {
   color: #ecf0f0;
@@ -358,8 +358,10 @@ button:hover,
   width: 100%;
   top: 0;
   height: 400px;
-  z-index: -10;
   background-color: #1d1e20;
+}
+#welcome {
+  z-index: 4;
 }
 #welcome .content {
   height: 400px;
@@ -367,12 +369,6 @@ button:hover,
 #welcome .content h1,
 #welcome .content h3 {
   color: #ecf0f0;
-}
-#welcome canvas {
-  position: fixed;
-  top: 0;
-  z-index: -10;
-  height: 400px;
 }
 @media only screen and (max-width: 640px) {
   #welcomeSection .content {
@@ -420,7 +416,7 @@ button:hover,
   background-color: #ecf0f0;
 }
 #resume {
-  background-color: #4383c1;
+  background-color: #2bb462;
   color: #ecf0f0;
 }
 #resume .resume {

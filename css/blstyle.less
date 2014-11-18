@@ -9,7 +9,8 @@
 // VARIABLES
 //
 @darkColor: #1d1e20;//#252525;
-@darkColorTransparent: rgba(37, 37, 37, 0.8); //37,37,37 is #252525
+//@darkColorAlt: @lighten(@darkColor, 5%); //28282b
+@darkColorTransparent: fade(@darkColor, 85%); //37,37,37 is #252525
 @lightColor: #ecf0f0;//eee;
 @primaryColor: #4383c1;//#00A7B6;
 @secondaryColor: #2bb462;//#FFAD00;
@@ -34,7 +35,7 @@
 
 @welcomeColor: @darkColor;
 @porfolioColor: @primaryColor;//#2F519F;
-@resumeColor: @primaryColor;//#2F519F; //#EE8732;
+@resumeColor: @secondaryColor;//#2F519F; //#EE8732;
 @aboutColor: @lightColor;//#EE8732; //#EE3233;
 @footerColor: @darkColor;
 
@@ -549,9 +550,10 @@ button, .button {
 #particles {
     position: fixed;
     width: 100%;
+    height: @welcomeHeight;
     top: 0;
     height: @welcomeHeight;
-    z-index: -10;
+    //z-index: -10;
     background-color: @welcomeColor;
 
     canvas {
@@ -562,20 +564,14 @@ button, .button {
 
 #welcome {
 
+    z-index: 4;
+
     .content {
         height: @welcomeHeight;
         h1, h3 {
             color: @lightTextColor;
         }
         
-    }
-
-    canvas {
-        position: fixed;
-        top: 0;
-        z-index: -10;
-        //margin-top: -@welcomeHeight;
-        height: @welcomeHeight;
     }
 }
 @media only screen and (max-width: 640px) {

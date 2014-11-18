@@ -57,6 +57,10 @@
         navigationScroll(e);
     });
 
+    $('#offcanvas-navigation a').on('click', function (e) {
+        navigationScroll(e);
+    });
+
     $(window).scrollTop();
 });
 
