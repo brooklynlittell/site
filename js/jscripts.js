@@ -1,17 +1,7 @@
 ﻿$(document).ready(function() {
 
-    var hideMobileNav = function() {
-        $('#offcanvas-navigation').toggleClass('on', false);
-        $('#body-shade').toggleClass('on', false);
-        $('#nav-menu').toggleClass('on', false);
-    };
-    var toggleMobileNav = function() {
-        $('#offcanvas-navigation').toggleClass('on');
-        $('#body-shade').toggleClass('on');
-        $('#nav-menu').toggleClass('on');
-    };
-
     // Navigation fade
+    /*
     $(window).on('scroll', function() {
         var top = $(window).scrollTop();
         var scrollThreshold = $('#welcome').height() - $('#navigation').height();
@@ -22,6 +12,18 @@
             $('#navigation').toggleClass('alt-colors', false);
         }
     });
+*/
+
+    var hideMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on', false);
+        $('#body-shade').toggleClass('on', false);
+        $('#nav-menu').toggleClass('on', false);
+    };
+    var toggleMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on');
+        $('#body-shade').toggleClass('on');
+        $('#nav-menu').toggleClass('on');
+    };
 
     // Mobile Nav Show/Hide
     $('#nav-menu').click( function(e){

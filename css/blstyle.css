@@ -12,7 +12,6 @@
 }
 body {
   font-family: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
-  margin-top: 400px;
 }
 object {
   width: 100%;
@@ -354,10 +353,11 @@ button:hover,
   margin-left: 0;
 }
 #particles {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   height: 400px;
+  z-index: -10;
   background-color: #1d1e20;
 }
 #welcome {
@@ -369,11 +369,6 @@ button:hover,
 #welcome .content h1,
 #welcome .content h3 {
   color: #ecf0f0;
-}
-@media only screen and (max-width: 640px) {
-  #welcomeSection .content {
-    height: 200px;
-  }
 }
 #portfolio {
   background-color: #4383c1;

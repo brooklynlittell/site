@@ -113,7 +113,7 @@
 //
 body {
     font-family: @openSans;
-    margin-top: @welcomeHeight;
+    //margin-top: @welcomeHeight;
     //animation: move 3s ease infinite;
 }
 
@@ -548,12 +548,12 @@ button, .button {
 
 
 #particles {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: @welcomeHeight;
     top: 0;
     height: @welcomeHeight;
-    //z-index: -10;
+    z-index: -10;
     background-color: @welcomeColor;
 
     canvas {
@@ -575,9 +575,9 @@ button, .button {
     }
 }
 @media only screen and (max-width: 640px) {
-    #welcomeSection {
+    #welcome {
         .content {
-            height: @welcomeHeight/2;
+            //height: @welcomeHeight/2;
         }
     }
 
