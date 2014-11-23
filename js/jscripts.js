@@ -12,7 +12,7 @@
             $('#navigation').toggleClass('alt-colors', false);
         }
     });
-*/
+    */
 
     var hideMobileNav = function() {
         $('#offcanvas-navigation').toggleClass('on', false);
@@ -52,7 +52,7 @@
         $('html,body').animate({
           scrollTop: ($dest.offset().top - $('#navigation').height())
         }, 200);
-    }
+    };
 
 
     $('#navigation a').on('click', function (e) {
@@ -62,6 +62,21 @@
     $('#offcanvas-navigation a').on('click', function (e) {
         navigationScroll(e);
     });
+
+
+    // Resume Viewer
+    $('#resume-button-bar li a').on('click', function(e) {
+        e.preventDefault();
+
+        var id = $(e.currentTarget).attr('href');
+        var target = $(id);
+
+        $('#resume-button-bar li a').toggleClass('on', false);
+        $(e.currentTarget).toggleClass('on', true);
+        $('#resume .resume .section').toggleClass('on', false);
+        target.toggleClass('on', true);
+    });
+
 
     $(window).scrollTop();
 });
@@ -100,7 +115,7 @@ particlesJS('particles', {
     detect_on: 'canvas', // "canvas" or "window"
     mode: 'grab',
     line_linked: {
-      opacity: .5
+      opacity: 0.5
     },
     events: {
       onclick: {
