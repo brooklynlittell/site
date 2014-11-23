@@ -536,6 +536,7 @@ button, .button {
 
 }
 
+@portfolioItemHeight: 300px;
 #portfolio {
     background-color: @porfolioColor;
 
@@ -545,35 +546,52 @@ button, .button {
 
         li {
             width: 100%;
-            height: 200px;
+            //height: @portfolioItemHeight;
             display: block;
-            //border: 1px solid @darkColor;
             .borderRadius(4px);
             overflow: hidden;
-            
+            margin-bottom: @margin;
 
-            .title, .description {
-                float: left;
-                height: 200px;
-                text-align: center;
-                padding: @padding;
-
-                .vertical-center-parent();
-            }
+            background-image: url('../images/test.jpg');       
+            background-position: center center;      
+            background-repeat: no-repeat;        
+            -moz-background-size: cover;     
+            -o-background-size: cover;       
+            -webkit-background-size: cover;      
+            background-size: cover;
 
             .title {
-                width: 25%;
-                background-color: @darkColor;
+                background-color: @darkColorTransparent;
+                padding: 5px @padding;
 
                 span {
+                    display: inline-block;
                     color: @lightColor;
+                    line-height: 45px;
+                    vertical-align: center;
+
                     font-size: 2em;
+                    font-weight: @heavy;
+
+                    &.role {
+                        float: right;
+                        font-weight: @light;
+                        font-size: 1em;
+                    }
                 }
             }
 
             .description {
-                width: 75%;
-                background-color: @lightColor;
+                height: 250px;
+                text-align: center;
+                padding: @padding;
+
+                .vertical-center-parent();
+
+                div {
+                    display: block;
+                    color: @lightColor;
+                }
             }
         }
     }
