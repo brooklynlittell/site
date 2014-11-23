@@ -38,9 +38,6 @@
     });
 
     $('#offcanvas-navigation a').click( function(e) {
-        //console.log(e.target.hash);
-        //e.preventDefault();
-        //$(window).scrollTo(e.target.hash, 20);
         hideMobileNav();
     });
 
@@ -54,12 +51,10 @@
         }, 200);
     };
 
-
-    $('#navigation a').on('click', function (e) {
+    $('#navigation a.inpage').on('click', function (e) {
         navigationScroll(e);
     });
-
-    $('#offcanvas-navigation a').on('click', function (e) {
+    $('#offcanvas-navigation a.inpage').on('click', function (e) {
         navigationScroll(e);
     });
 
