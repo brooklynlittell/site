@@ -107,14 +107,19 @@
     .vertical-center-parent();
 }
 
+.round {
+    .borderRadius(50%);
+}
+.rounded {
+    .borderRadius();
+}
+
 
 //
 // Element overrides
 //
 body {
     font-family: @openSans;
-    //margin-top: @welcomeHeight;
-    //animation: move 3s ease infinite;
 }
 
 
@@ -131,15 +136,9 @@ button, .button {
     background-color: @darkColor;
     transition: all 0.15s;
 
-    &:hover {
+    &:hover, &:active {
         color: @darkTextColor;
         background-color: @lightColor;
-    }
-}
-
-@keyframes move {
-    50% {
-        transform: translate(100px, 100px);
     }
 }
 
@@ -211,13 +210,40 @@ button, .button {
             width: 100%;
         }
     }
-}
 
-.round {
-    .borderRadius(50%);
+    &.four-up
+    {
+        margin: 0;
+        li {
+            margin: 0;
+            display: inline-block;
+            width: 25%;
+        }
+    }
 }
-.rounded {
-    .borderRadius();
+@media only screen and (max-width: 640px) {
+
+    .inline-list.stack-for-small {
+
+        li {
+            display: block;
+
+            a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &.four-up
+        {
+            margin: 0;
+            li {
+                margin: 0;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .section {
@@ -245,84 +271,9 @@ button, .button {
 }
 
 
-.heading {
-
-    &.center {
-        text-align: center;
-    }
-    &.left {
-        text-align: left;
-    }
-    &.right {
-        text-align: right;
-    }
-
-    h1 {
-        margin: @padding/2 0 0 0;
-
-        font-family: @openSans;
-        font-weight: 300;
-        font-size: 80px;
-        line-height: 60px;
-    }
-    h2 {
-        margin-bottom: @padding;
-
-        font-family: @sourceCodePro;
-        font-weight: 300;
-        font-size: 30px;
-
-        .code {
-            font-family: @sourceCodePro;
-        }
-    }
-}
-@media only screen and (max-width: 1024px) {
-    .heading {
-        h1 {
-            margin: @padding/2 0 0 0;
-            font-size: 55px;
-            line-height: 55px;
-        }
-
-        h2 {
-            margin-bottom: @padding;
-            font-size: 20px;
-        }
-    }
-}
-
-
-
-
 //
 // Page IDs
 //
-
-// Cover image (my face) fixed to the top of the page
-#background-cover {
-    position: fixed;
-    top: 0;
-
-    width: 100%;
-    height: 500px + @navHeight;
-    z-index: -5;
-
-    background-image: url('../images/crop2.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-@media only screen and (max-width: 640px) {
-
-    #background-cover {
-        height: 300px + @navHeightSmall;
-        background-position: center center;
-    }
-}
 
 // Transparent overlay covering body from nav down
 #body-shade {
@@ -506,7 +457,6 @@ button, .button {
     font-weight: @light;
 
     background-color: @navBackgroundSolid;
-    background-image: url('../images/patterns/3.png');
     transition: all 0.15s;
 
     ul {
@@ -625,9 +575,21 @@ button, .button {
         }
     }
 }
+
+
 #resume {
     background-color: @resumeColor;
     color: @navText;
+
+    #resume-button-bar {
+        display: block;
+        overflow: hidden;
+        margin: 0 0 @margin 0;
+
+        a {
+            margin: 0;
+        }
+    }
 
     .resume {
         margin-bottom: 20px;
@@ -673,13 +635,11 @@ button, .button {
 }
 
 #footer {
-
     //height: @footerHeight;
     padding: 0;
     text-align: center;
 
     background-color: @footerColor;
-    background-image: url('../images/patterns/3.png');
     color: @navText;
 
     p {
@@ -714,7 +674,7 @@ button, .button {
     }
 }
 @media only screen and (max-width: 640px) {
-    #footer-section {
+    #footer {
 
         p {
             text-align: center;
@@ -730,38 +690,4 @@ button, .button {
         }
     }
 
-}
-
-
-
-
-.imageList {
-
-    text-align: center;
-    margin: 0 auto;
-
-    .imageListItem {
-
-        display: block;
-        width: 100%;
-        height: 250px;
-        border: 2px @navText solid;
-        .borderRadius();
-        overflow: hidden;
-
-        h3 {
-            margin: 0 auto;
-            position: relative;
-            font-family: @openSans;
-            font-weight: @heavy;
-        }
-
-        img {
-            width: 500px;
-            height: 100%;
-        }
-
-    }
-
-    
 }
