@@ -71,8 +71,17 @@
         $('#resume .resume .section').toggleClass('on', false);
         target.toggleClass('on', true);
     });
+    var initResumeViewer = function() {
+        var initSection = '#resume-experience';
+        $('#resume-button-bar').toggleClass('hidden', false);
+        $('#resume-button-bar li a').toggleClass('on', false);
+        $('#resume .resume .section').toggleClass('on', false);
 
+        $('#resume-button-bar li a[href="' + initSection + '"]').toggleClass('on', true);
+        $(initSection).toggleClass('on', true);
+    };
 
+    initResumeViewer();
     $(window).scrollTop();
 });
 
