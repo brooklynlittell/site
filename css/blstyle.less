@@ -31,7 +31,8 @@
 @navHeightSmall: 65px;
 
 @welcomeHeight: 400px;
-@footerHeight: 45px;
+@footerHeight: @navHeight;
+@footerHeightSmall: @navHeightSmall;
 
 @welcomeColor: @darkColor;
 @porfolioColor: @primaryColor;//#2F519F;
@@ -516,8 +517,7 @@ button, .button {
 
 
 #welcome {
-
-    z-index: 4;
+    margin-top: -3px;
 
     .content {
         height: @welcomeHeight;
@@ -622,6 +622,7 @@ button, .button {
     }
 
 }
+
 #about {
     background-color: @aboutColor;
 
@@ -638,47 +639,37 @@ button, .button {
         font-weight: @heavy;
     }
 }
-@media only screen and (max-width: 1024px) {
-    #aboutSection p {
-        font-size: 18px;
-    }
-}
 
 #footer {
-    //height: @footerHeight;
-    padding: 0;
-    text-align: center;
-
     background-color: @footerColor;
     color: @navText;
 
     p {
-        font-size: 15*@em;
-        margin: 10px 0px;
+        line-height: @footerHeight;
+        margin: 0;
     }
 
     .inline-list {
         margin: 0;
-        width: 100%;
+        float: right;
 
         li {
             margin: 0;
             text-align: center;
 
+
             a {
-                padding: 10px 10px;
+                padding: 0 20px;
 
                 color: @navText;
-                font-size: 20*@em;
-                line-height: 20*@em;
+                font-size: 24*@em;
+                line-height: @footerHeight;
 
                 transition: all 0.15s;
             }
             a:hover {
                 color: #222;
                 background-color: @navText;
-                //color: lighten(@navText, 30%);
-                //background-color: #222;
             }
         }
     }
@@ -688,14 +679,21 @@ button, .button {
 
         p {
             text-align: center;
+            line-height: @footerHeightSmall;
             width: 100%;
         }
 
         .inline-list {
             width: 100%;
+            float: none;
 
             li {
-                width: 100%;
+                width: 20%;
+
+                a {
+                    padding: 0;
+                    line-height: @footerHeightSmall;
+                }
             }
         }
     }

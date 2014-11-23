@@ -331,7 +331,7 @@ button.on,
   background-color: #1d1e20;
 }
 #welcome {
-  z-index: 4;
+  margin-top: -3px;
 }
 #welcome .content {
   height: 400px;
@@ -430,34 +430,27 @@ button.on,
   text-align: center;
   font-weight: 600;
 }
-@media only screen and (max-width: 1024px) {
-  #aboutSection p {
-    font-size: 18px;
-  }
-}
 #footer {
-  padding: 0;
-  text-align: center;
   background-color: #1d1e20;
   color: #ecf0f0;
 }
 #footer p {
-  font-size: 0.9375em;
-  margin: 10px 0px;
+  line-height: 75px;
+  margin: 0;
 }
 #footer .inline-list {
   margin: 0;
-  width: 100%;
+  float: right;
 }
 #footer .inline-list li {
   margin: 0;
   text-align: center;
 }
 #footer .inline-list li a {
-  padding: 10px 10px;
+  padding: 0 20px;
   color: #ecf0f0;
-  font-size: 1.25em;
-  line-height: 1.25em;
+  font-size: 1.5em;
+  line-height: 75px;
   transition: all 0.15s;
 }
 #footer .inline-list li a:hover {
@@ -467,12 +460,18 @@ button.on,
 @media only screen and (max-width: 640px) {
   #footer p {
     text-align: center;
+    line-height: 65px;
     width: 100%;
   }
   #footer .inline-list {
     width: 100%;
+    float: none;
   }
   #footer .inline-list li {
-    width: 100%;
+    width: 20%;
+  }
+  #footer .inline-list li a {
+    padding: 0;
+    line-height: 65px;
   }
 }
