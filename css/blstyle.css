@@ -357,7 +357,7 @@ button.on,
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 0.9375em;
-  background-image: url('../images/test.jpg');
+  background-color: #1d1e20;
   background-position: center center;
   background-repeat: no-repeat;
   -moz-background-size: cover;
@@ -393,6 +393,18 @@ button.on,
 #portfolio .portfolio-list li .description div {
   display: block;
   color: #ecf0f0;
+}
+#portfolio-dash {
+  background-image: url('../images/test.jpg');
+}
+#portfolio-jpp {
+  background-image: url('../images/test.jpg');
+}
+#portfolio-coderit {
+  background-image: url('../images/test.jpg');
+}
+#portfolio-tip {
+  background-image: url('../images/test.jpg');
 }
 #resume {
   background-color: #2bb462;
@@ -443,6 +455,15 @@ button.on,
 #about p:last-of-type {
   text-align: center;
   font-weight: 600;
+}
+#about img {
+  margin-bottom: 0.9375em;
+}
+@media only screen and (max-width: 640px) {
+  #about img {
+    max-width: 200px;
+    text-align: center;
+  }
 }
 #footer {
   background-color: #1d1e20;
