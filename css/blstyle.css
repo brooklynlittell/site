@@ -41,7 +41,9 @@ button,
 button:hover,
 .button:hover,
 button:active,
-.button:active {
+.button:active,
+button.on,
+.button.on {
   color: #1d1e20;
   background-color: #ecf0f0;
 }
@@ -388,15 +390,26 @@ button:active,
   margin: 0;
 }
 #resume .resume {
-  margin-bottom: 20px;
+  margin-bottom: 0.9375em;
+  padding: 0.9375em;
+  background-color: #ecf0f0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 #resume .resume p {
   line-height: 24px;
   margin: 0;
 }
 #resume .resume .section {
-  color: #ecf0f0;
+  color: #1d1e20;
   margin-bottom: 0.9375em;
+  display: none;
+}
+#resume .resume .section.on {
+  display: block;
 }
 @media only screen and (max-width: 640px) {
   .resume p {

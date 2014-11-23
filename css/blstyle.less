@@ -136,7 +136,7 @@ button, .button {
     background-color: @darkColor;
     transition: all 0.15s;
 
-    &:hover, &:active {
+    &:hover, &:active, &.on {
         color: @darkTextColor;
         background-color: @lightColor;
     }
@@ -592,17 +592,24 @@ button, .button {
     }
 
     .resume {
-        margin-bottom: 20px;
+        margin-bottom: @margin;
+        padding: @padding;
+        background-color: @lightColor;
+        .borderRadius();
 
         p {
             line-height: 24px;
             margin: 0;
-            //font-size: 20px;
         }
 
         .section {
-            color: @lightTextColor;
+            color: @darkTextColor;
             margin-bottom: @padding;
+            display: none;
+
+            &.on {
+                display: block;
+            }
         }
     }
 }
