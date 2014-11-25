@@ -10,8 +10,9 @@
 //
 @darkColor: #1d1e20;//#252525;
 //@darkColorAlt: @lighten(@darkColor, 5%); //28282b
-@darkColorTransparent: fade(@darkColor, 85%); //37,37,37 is #252525
+@darkColorTransparent: fade(@darkColor, 85%);
 @lightColor: #ecf0f0;//eee;
+@lightColorTransparent: fade(@lightColor, 85%);
 @primaryColor: #4383c1;//#00A7B6;
 @secondaryColor: #2bb462;//#FFAD00;
 
@@ -606,6 +607,23 @@ button, .button {
                 div {
                     display: block;
                     color: @lightColor;
+
+                    p {
+                        display: inline-block;
+                        padding: @padding/2 @padding;
+                        background-color: @darkColorTransparent;
+                        .borderRadius();
+                    }
+
+                    .button {
+                        display: inline-block;
+                        margin-bottom: 0;
+                        background-color: @darkColorTransparent;
+
+                        &:hover {
+                            background-color: @lightColorTransparent;
+                        }
+                    }
                 }
             }
         }

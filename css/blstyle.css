@@ -413,6 +413,24 @@ button.on,
   display: block;
   color: #ecf0f0;
 }
+#portfolio .portfolio-list li .description div p {
+  display: inline-block;
+  padding: 0.46875em 0.9375em;
+  background-color: rgba(29, 30, 32, 0.85);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+#portfolio .portfolio-list li .description div .button {
+  display: inline-block;
+  margin-bottom: 0;
+  background-color: rgba(29, 30, 32, 0.85);
+}
+#portfolio .portfolio-list li .description div .button:hover {
+  background-color: rgba(236, 240, 240, 0.85);
+}
 @media only screen and (max-width: 640px) {
   #portfolio .portfolio-list li .title span {
     display: block;
