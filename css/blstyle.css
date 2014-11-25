@@ -387,10 +387,12 @@ button.on,
   padding: 5px 0.9375em;
 }
 #portfolio .portfolio-list li .title span {
+  float: none;
   display: inline-block;
   color: #ecf0f0;
   line-height: 45px;
   vertical-align: center;
+  text-align: left;
   font-size: 2em;
   font-weight: 600;
 }
@@ -410,6 +412,17 @@ button.on,
 #portfolio .portfolio-list li .description div {
   display: block;
   color: #ecf0f0;
+}
+@media only screen and (max-width: 640px) {
+  #portfolio .portfolio-list li .title span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  #portfolio .portfolio-list li .title span.role {
+    float: none;
+    line-height: 24px;
+  }
 }
 #portfolio-dash {
   background-image: url('../images/test.jpg');

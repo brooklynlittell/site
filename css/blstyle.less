@@ -578,10 +578,12 @@ button, .button {
                 padding: 5px @padding;
 
                 span {
+                    float: none;
                     display: inline-block;
                     color: @lightColor;
                     line-height: 45px;
                     vertical-align: center;
+                    text-align: left;
 
                     font-size: 2em;
                     font-weight: @heavy;
@@ -609,6 +611,19 @@ button, .button {
         }
     }
 }
+@media only screen and (max-width: 640px) {
+    #portfolio .portfolio-list li .title span {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        &.role {
+            float: none;
+            line-height: 24px;
+        }
+    }
+}
+
 #portfolio-dash {
     background-image: url('../images/test.jpg');
 }
