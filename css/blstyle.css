@@ -1,3 +1,7 @@
+.shadow {
+  -webkit-box-shadow: 0px -2px 10px rgba(1, 1, 1, 0.3);
+  box-shadow: 0px -2px 10px rgba(1, 1, 1, 0.3);
+}
 .vertical-center {
   position: relative;
   top: 50%;
@@ -91,6 +95,19 @@ button.on,
 }
 .text-uppercase {
   text-transform: uppercase;
+}
+.text-light {
+  color: #ecf0f0;
+}
+.text-dark {
+  color: #1d1e20;
+}
+.text-dark-transparent {
+  color: rgba(29, 30, 32, 0.85);
+}
+.text-shadow {
+  -webkit-text-shadow: 0 0 10px rgba(1, 1, 1, 0.7);
+  text-shadow: 0 0 10px #010101;
 }
 .inline-list {
   list-style-type: none;
@@ -398,7 +415,7 @@ button.on,
   background-image: url('../images/test.jpg');
 }
 #portfolio-jpp {
-  background-image: url('../images/jpp.png');
+  background-image: url('../images/jpp-blur.png');
 }
 #portfolio-coderit {
   background-image: url('../images/test.jpg');
