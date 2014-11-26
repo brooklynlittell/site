@@ -84,6 +84,17 @@ button.on,
 .hidden {
   display: none;
 }
+.panel {
+  background-color: #ecf0f0;
+  padding: 0.9375em;
+  margin-bottom: 0.9375em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
+}
 .text-centered {
   text-align: center;
 }
@@ -482,16 +493,6 @@ button.on,
 #resume #resume-button-bar a {
   margin: 0;
 }
-#resume .resume {
-  margin-bottom: 0.9375em;
-  padding: 0.9375em;
-  background-color: #ecf0f0;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
 #resume .resume p {
   line-height: 24px;
   margin: 0;
@@ -516,18 +517,12 @@ button.on,
   color: #1d1e20;
   text-align: justify;
 }
-#about p:last-of-type {
+#about .about-photo {
   text-align: center;
-  font-weight: 600;
 }
-#about img {
+#about .about-photo img {
+  max-width: 200px;
   margin-bottom: 0.9375em;
-}
-@media only screen and (max-width: 640px) {
-  #about img {
-    max-width: 200px;
-    text-align: center;
-  }
 }
 #footer {
   background-color: #1d1e20;

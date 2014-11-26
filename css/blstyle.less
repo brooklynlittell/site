@@ -8,13 +8,13 @@
 //
 // VARIABLES
 //
-@darkColor: #1d1e20;//#252525;
-//@darkColorAlt: @lighten(@darkColor, 5%); //28282b
+@darkColor: #1d1e20;
 @darkColorTransparent: fade(@darkColor, 85%);
-@lightColor: #ecf0f0;//eee;
+@lightColor: #ecf0f0;
 @lightColorTransparent: fade(@lightColor, 85%);
-@primaryColor: #4383c1;//#00A7B6;
-@secondaryColor: #2bb462;//#FFAD00;
+@primaryColor: #4383c1;
+@secondaryColor: #2bb462;
+@orangeColor: #bdc3c7;
 
 
 @shadeBackground: rgba(0, 0, 0, 0.8);
@@ -36,9 +36,9 @@
 @footerHeightSmall: @navHeightSmall;
 
 @welcomeColor: @darkColor;
-@porfolioColor: @primaryColor;//#2F519F;
-@resumeColor: @secondaryColor;//#2F519F; //#EE8732;
-@aboutColor: @lightColor;//#EE8732; //#EE3233;
+@porfolioColor: @primaryColor;
+@resumeColor: @secondaryColor;
+@aboutColor: @lightColor;
 @footerColor: @darkColor;
 
 // Text
@@ -183,6 +183,13 @@ button, .button {
 }
 .hidden {
     display: none;
+}
+.panel {
+    background-color: @lightColor;
+    padding: @padding;
+    margin-bottom: @margin;
+    .borderRadius();
+    border: 0;
 }
 
 
@@ -688,10 +695,6 @@ button, .button {
     }
 
     .resume {
-        margin-bottom: @margin;
-        padding: @padding;
-        background-color: @lightColor;
-        .borderRadius();
 
         p {
             line-height: 24px;
@@ -722,20 +725,13 @@ button, .button {
         color: @darkTextColor;
         text-align: justify;
     }
-    p:last-of-type {
-        text-align: center;
-        font-weight: @heavy;
-    }
 
-    img {
-        margin-bottom: @margin;
-    }
-}
-@media only screen and (max-width: 640px) {
-    #about {
+    .about-photo {
+        text-align: center;
+
         img {
             max-width: 200px;
-            text-align: center;
+            margin-bottom: @margin;
         }
     }
 }
