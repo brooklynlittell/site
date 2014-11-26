@@ -349,6 +349,7 @@ button.on,
 }
 #welcome {
   margin-top: -3px;
+  padding-bottom: 0;
 }
 #welcome .content {
   height: 400px;
@@ -359,6 +360,7 @@ button.on,
 }
 #portfolio {
   background-color: #4383c1;
+  padding-bottom: 0.9375em;
 }
 #portfolio .portfolio-list {
   list-style: none;
@@ -373,7 +375,7 @@ button.on,
   -o-border-radius: 4px;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 0.9375em;
+  margin-bottom: 1.875em;
   background-color: #1d1e20;
   background-position: center center;
   background-repeat: no-repeat;
@@ -443,16 +445,30 @@ button.on,
   }
 }
 #portfolio-dash {
-  background-image: url('../images/test.jpg');
+  background-image: url('../images/portfolio/dash.png');
 }
 #portfolio-jpp {
-  background-image: url('../images/jpp-blur.png');
+  background-image: url('../images/portfolio/jpp.png');
 }
 #portfolio-coderit {
-  background-image: url('../images/test.jpg');
+  background-image: url('../images/portfolio/coderit.png');
 }
 #portfolio-tip {
-  background-image: url('../images/test.jpg');
+  background-image: url('../images/portfolio/tip.png');
+}
+@media only screen and (max-width: 640px) {
+  #portfolio-dash {
+    background-image: url('../images/portfolio/dash-small.png');
+  }
+  #portfolio-jpp {
+    background-image: url('../images/portfolio/jpp-small.png');
+  }
+  #portfolio-coderit {
+    background-image: url('../images/portfolio/coderit-small.png');
+  }
+  #portfolio-tip {
+    background-image: url('../images/portfolio/tip-small.png');
+  }
 }
 #resume {
   background-color: #2bb462;

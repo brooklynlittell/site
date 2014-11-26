@@ -534,6 +534,7 @@ button, .button {
 
 #welcome {
     margin-top: -3px;
+    padding-bottom: 0;
 
     .content {
         height: @welcomeHeight;
@@ -554,6 +555,7 @@ button, .button {
 
 #portfolio {
     background-color: @porfolioColor;
+    padding-bottom: @padding;
 
     .portfolio-list {
         list-style: none;
@@ -564,7 +566,7 @@ button, .button {
             display: block;
             .borderRadius(4px);
             overflow: hidden;
-            margin-bottom: @margin;
+            margin-bottom: @margin*2;
 
             background-color: @darkColor;  
             background-position: center center;      
@@ -643,16 +645,31 @@ button, .button {
 }
 
 #portfolio-dash {
-    background-image: url('../images/test.jpg');
+    background-image: url('../images/portfolio/dash.png');
 }
 #portfolio-jpp {
-    background-image: url('../images/jpp-blur.png');
+    background-image: url('../images/portfolio/jpp.png');
 }
 #portfolio-coderit {
-    background-image: url('../images/test.jpg');
+    background-image: url('../images/portfolio/coderit.png');
 }
 #portfolio-tip {
-    background-image: url('../images/test.jpg');
+    background-image: url('../images/portfolio/tip.png');
+}
+
+@media only screen and (max-width: 640px) {
+    #portfolio-dash {
+        background-image: url('../images/portfolio/dash-small.png');
+    }
+    #portfolio-jpp {
+        background-image: url('../images/portfolio/jpp-small.png');
+    }
+    #portfolio-coderit {
+        background-image: url('../images/portfolio/coderit-small.png');
+    }
+    #portfolio-tip {
+        background-image: url('../images/portfolio/tip-small.png');
+    }
 }
 
 
