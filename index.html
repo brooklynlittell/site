@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Brandon Littell - I write code;</title>
+    <title>Brandon Littell - Software Engineer</title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css' />
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css" />
@@ -14,28 +14,27 @@
     <link rel="stylesheet" href="css/blstyle.css" />
     <link rel="stylesheet" href="css/blico.css" />
   
-    <script src="js/jquery2.0.2.js"></script>
-    <script src="js/vendor/custom.modernizr.js"></script>
+    <script src="js/min/jquery2.0.2.min.js"></script>
+    <script src="js/min/modernizr.min.js"></script>
 </head>
 <body>
 
-	<div id="test-animate"></div>
-
-	<div id="background-cover"></div>
-
 	<div id="body-shade"></div>
 
-    <div id="navigation">
+    
+    
+    <div id="navigation" class="alt-colors">
         <div class="row">
-            <div class="large-4 medium-4 columns">
-            	<a href="#" id="nav-menu" alt="Menu"><span></span></a>
-                <a href="#" class="logo"><img src="images/brandonLittell.png" /></a>
+            <div class="large-3 medium-3 columns">
+                <a href="#welcome" class="inpage logo"><img src="images/brandonLittell.png" /></a>
+                <a href="#" id="nav-menu" alt="Menu"><span></span></a>
             </div>
-            <div class="large-8 medium-8 columns hide-for-small">
+            <div class="large-9 medium-9 columns hide-for-small">
                 <ul class="inline-list right">
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="#portfolio" class="inpage">Portfolio</a></li>
+                    <li><a href="#about" class="inpage">About Me</a></li>
+                    <li><a href="#resume" class="inpage">Resume</a></li>
+                    <li><a href="#footer" class="inpage">Contact</a></li>
                     <li><a href="http://brandonlittell.com/blog">Blog</a></li>
                 </ul>
             </div>
@@ -44,76 +43,214 @@
 
     <div id="offcanvas-navigation" class="hide-for-medium-up">
     	<ul>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#footer">Contact</a></li>
+            <li><a href="#portfolio" class="inpage">Portfolio</a></li>
+            <li><a href="#about" class="inpage">About Me</a></li>
+            <li><a href="#resume" class="inpage">Resume</a></li>
+            <li><a href="#footer" class="inpage">Contact</a></li>
             <li><a href="http://brandonlittell.com/blog">Blog</a></li>
         </ul>
     </div>
 
-    
 
     <a name="welcome"></a>
-    <div id="welcomeSection">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="heading center">
-                    <h1>Hello, World!</h1>
-                    <h2><span class="code">I write code;</span></h2>
-                </div>
-                
+    <div id="welcome" class="section">
+        
+        <div class="content vertical-center-parent">
+        
+            <div class="vertical-center text-centered">
+                <h1 class="text-heavy">Hi, I'm Brandon Littell</h1>
+                <h3>Software Engineer</h3>
             </div>
+            
         </div>
+
+        <div id="particles"></div>
+
+
     </div>
 
 
-    <!--
     <a name="portfolio"></a>
-    <div id="portfolioSection">
+    <div id="portfolio" class="section">
         <div class="row">
             <div class="large-12 columns">
-                <div class="heading center">
-                    <h1>Portfolio</h1>
-                    <h2>Code Thang</h2>
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">Portfolio</h1>
                 </div>
-                
-                <ul id="portfolioGrid" class="large-block-grid-3 small-block-grid-1 imageList">
-                    <li><a class="imageListItem" href="#"><span><h3>Project-192</h3></span><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Just Press Play</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Pinball</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Modoku</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Boom Boom Cowboy</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Fluxometry</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Test</h3><img src="http://placehold.it/500x300" /></a></li>
-                    <li><a class="imageListItem" href="#"><h3>Test</h3><img src="http://placehold.it/500x300" /></a></li>
+
+                <ul class="portfolio-list">
+
+                    <li id="portfolio-dash">
+                        <div class="title">
+                            <span>Dash Engine</span>
+                            <span class="role">Tools &amp; UI Engineer</span>
+                        </div>
+                        <div class="description">
+                            <div class="vertical-center">
+                                <p>A free and open 3D game engine written in D.</p>
+                                <br />
+                                <a href="https://github.com/Circular-Studios/Dash" target="_blank" class="button rounded" aria-hidden="true" data-icon="&#xe002;"> Github</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="portfolio-coderit">
+                        <div class="title">
+                            <span>codeRIT</span>
+                            <span class="role">Sponsorship Team Lead</span>
+                        </div>
+                        <div class="description">
+                            <div class="vertical-center">
+                                <p>The community for RIT's developers and creative thinkers.</p>
+                                <br />
+                                <a href="https://coderit.org" target="_blank" class="button rounded">Website</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="portfolio-jpp">
+                        <div class="title">
+                            <span>Just Press Play</span>
+                            <span class="role">Front-End Engineer</span>
+                        </div>
+                        <div class="description">
+                            <div class="vertical-center">
+                                <p>A playful activity layer for daily undergraduate life.</p>
+                                <br />
+                                <a href="https://github.com/RIT-MAGIC/JustPressPlay" target="_blank" class="button rounded" aria-hidden="true" data-icon="&#xe002;"> Github</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="portfolio-tip">
+                        <div class="title">
+                            <span>Tip Calculator</span>
+                            <span class="role">Solo Project</span>
+                        </div>
+                        <div class="description">
+                            <div class="vertical-center">
+                                <p>Simple tip calculation app. Works great on mobile!</p>
+                                <br />
+                                <a href="https://github.com/BrandonLittell/TipCalculator" target="_blank" class="button rounded" aria-hidden="true" data-icon="&#xe002;"> Github</a>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
-    -->
+
+
+    <a name="about"></a>
+    <div id="about" class="section">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">About Me</h1>
+                </div>
+            </div>
+        </div>
+        <div class="about-photo">
+            <img src="images/brandon.jpg" class="rounded"/>
+        </div>
+        <div class="row">
+            <div class="large-6 medium-6 columns">
+                <p>Hey! My name is Brandon and I'm a guy who likes to write code. I also enjoy tracking fitness data, finding new music, watching hockey, playing games, drinking good brews and hanging with great friends, but not necessarily at the same time. My favorites: <a href="http://www.flumemusic.com/" target="_blank">Flume</a>, <a href="http://www.thelastofus.playstation.com/" target="_blank">The Last of Us</a>, <a href="http://www.stbcbeer.com/live-pale-ale-bottle-conditioned/" target="_blank">Southern Tier Live</a>, <a href="http://penguins.nhl.com/" target="_blank">Pittsburgh Penguins.</a></p>
+            </div>
+            <div class="large-6 medium-6 columns">
+                <p>I'm extremely happy to be joining the Operating Systems Group at Microsoft in 2015. I can't wait to jump in and help to make a positive impact on the world with my favorite hobby. In January I'll be moving from my long-time home of Pittsburgh to Seattle after graduating from Rochester Institute of Technology at the end of 2014.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns text-center text-dark">
+                <p class="text-center text-heavy"><a href="#footer" class="inpage">Send me a message using the options below!</a></p>
+            </div>
+        </div>
+    </div>
 
 
     <a name="resume"></a>
-    <div id="resumeSection">
+    <div id="resume" class="section">
         <div class="row">
             <div class="large-12 columns">
 
-                <div class="heading center">
-                    <h1>Resume</h1>
+                <div class="text-centered margin-top">
+                    <h1 class="text-heavy">Resume</h1>
                 </div>
 
-                <div class="resume">
+                <ul id="resume-button-bar" class="inline-list four-up stack-for-small rounded hidden">
+                    <li><a href="#resume-experience" class="button">Experience</a></li>
+                    <li><a href="#resume-projects" class="button">Projects</a></li>
+                    <li><a href="#resume-education" class="button">Education</a></li>
+                    <li><a href="#resume-skills" class="button">Skills</a></li>
+                </ul>
 
-                    <div class="section">
-                 		<h2>Skills</h2>
-    	                <p><strong>Languages:</strong> C++, C#, JavaScript, D, Java, HTML5, CSS3, Objective-C, MySQL</p>
-    					<p><strong>Software:</strong> Visual Studio, Sublime, Git, dub, Xcode, SVN, Eclipse, UDK, Unity, Photoshop, Maya</p>
-    					<p><strong>Libraries &amp; Frameworks:</strong> jQuery, OpenGL 4, DirectX 11, XNA, Foundation, ASP.NET MVC4, Box2D</p>
+
+                <div class="resume panel">
+
+                    <div id="resume-experience" class="section on">
+                        <h3>Experience</h3>
+
+                        <p><em>Microsoft Corperation, Redmond, WA</em></p>
+                        <div class="row">
+                            <div class="medium-8 columns">
+                                <p><strong>Software Development Engineer Intern</strong></p>
+                            </div>
+                            <div class="medium-4 columns">
+                                <p class="right"><strong>June 2014 - August 2014</strong></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Developer for Operating Systems Group.</li>
+                        </ul>
+
+                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                        <div class="row">
+                            <div class="medium-8 columns">
+                                <p><strong>Front End Engineer</strong> on <strong>Just Press Play</strong></p>
+                            </div>
+                            <div class="medium-4 columns">
+                                <p class="right"><strong>May 2013 - May 2014</strong></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Launching Fall 2014.</li>
+                            <li>Implemented redesign of entire system using ASP.NET MVC4 and HTML/CSS/JS/Razor.</li>
+                            <li>Engineered structures to load data as users expect more information.</li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="medium-8 columns">
+                                <p><strong>Research Developer</strong> on <strong>Modoku</strong> (Solo project)</p>
+                            </div>
+                            <div class="medium-4 columns">
+                                <p class="right"><strong>September 2012 - February 2013</strong></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Built color-based Sudoku for the College of Imaging Arts & Sciences (CIAS) to evaluate students’ ability to differentiate color hues and saturation.</li>
+                            <li>Tested Modoku in a classroom environment and presented findings to professors in CIAS.</li>
+                        </ul>
+
+                        <p><em>iD Tech Camps, Campbell, CA</em></p>
+                        <div class="row">
+                            <div class="medium-8 columns">
+                                <p><strong>Course Instructor</strong></p>
+                            </div>
+                            <div class="medium-4 columns">
+                                <p class="right"><strong>Summer 2012</strong></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Taught students programming in Java and game design using UDK and Neverwinter Nights 2.</li>
+                            <li>Helped students understand the fundamentals of object-oriented programming.</li>
+                        </ul>
                     </div>
 
 
-                    <div class="section">
-                        <h2>Recent Projects</h2>
+                    <div id="resume-projects" class="section on">
+                        <h3>Projects</h3>
 
                         <div class="row">
                             <div class="medium-8 columns">
@@ -170,69 +307,9 @@
                         </ul>
                     </div>
 
-                    
-                    <div class="section">
-    					<h2>Work Experience</h2>
 
-						<p><em>Microsoft Corperation, Redmond, WA</em></p>
-    					<div class="row">
-    						<div class="medium-8 columns">
-    							<p><strong>Software Development Engineer Intern</strong></p>
-    						</div>
-    						<div class="medium-4 columns">
-    							<p class="right"><strong>June 2014 - Current</strong></p>
-    						</div>
-    					</div>
-    					<ul>
-    						<li>Developer for Operating Systems Group.</li>
-    					</ul>
-
-    					<p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-    					<div class="row">
-    						<div class="medium-8 columns">
-    							<p><strong>Front End Engineer</strong> on <strong>Just Press Play</strong></p>
-    						</div>
-    						<div class="medium-4 columns">
-    							<p class="right"><strong>May 2013 - May 2014</strong></p>
-    						</div>
-    					</div>
-    					<ul>
-    						<li>Launching Fall 2014.</li>
-    						<li>Implemented redesign of entire system using ASP.NET MVC4 and HTML/CSS/JS/Razor.</li>
-    						<li>Engineered structures to load data as users expect more information.</li>
-    					</ul>
-
-    					<div class="row">
-    						<div class="medium-8 columns">
-    							<p><strong>Research Developer</strong> on <strong>Modoku</strong> (Solo project)</p>
-    						</div>
-    						<div class="medium-4 columns">
-    							<p class="right"><strong>September 2012 - February 2013</strong></p>
-    						</div>
-    					</div>
-    					<ul>
-    						<li>Built color-based Sudoku for the College of Imaging Arts & Sciences (CIAS) to evaluate students’ ability to differentiate color hues and saturation.</li>
-    						<li>Tested Modoku in a classroom environment and presented findings to professors in CIAS.</li>
-    					</ul>
-
-    					<p><em>iD Tech Camps, Campbell, CA</em></p>
-    					<div class="row">
-    						<div class="medium-8 columns">
-    							<p><strong>Course Instructor</strong></p>
-    						</div>
-    						<div class="medium-4 columns">
-    							<p class="right"><strong>Summer 2012</strong></p>
-    						</div>
-    					</div>
-    					<ul>
-    						<li>Taught students programming in Java and game design using UDK and Neverwinter Nights 2.</li>
-    						<li>Helped students understand the fundamentals of object-oriented programming.</li>
-    					</ul>
-                    </div>
-
-
-                    <div class="section">
-    					<h2>Education</h2>
+                    <div id="resume-education" class="section on">
+    					<h3>Education</h3>
     					<p><em>Rochester Institute of Technology, Rochester, NY</em><p>
     					<div class="row">
     						<div class="medium-8 columns">
@@ -251,9 +328,17 @@
     						</div>
     					</div>
                     </div>
+
+
+                    <div id="resume-skills" class="section on">
+                        <h3>Skills</h3>
+                        <p><strong>Languages:</strong> C++, C#, JavaScript, D, Java, HTML5, CSS3, Objective-C, MySQL</p>
+                        <p><strong>Software:</strong> Visual Studio, Sublime, Git, dub, Xcode, SVN, Eclipse, UDK, Unity, Photoshop, Maya</p>
+                        <p><strong>Libraries &amp; Frameworks:</strong> jQuery, OpenGL 4, DirectX 11, XNA, Foundation, ASP.NET MVC4, Box2D</p>
+                    </div>
                 </div>
 
-                <a href="docs/BrandonLittellResume.pdf" target="_blank" class="button expand">Prefer a download? No problem. (PDF)</a>
+                <a href="docs/BrandonLittellResume.pdf" target="_blank" class="button expand rounded">Prefer a download? No problem. (PDF)</a>
                 
             </div>
         </div>
@@ -261,86 +346,41 @@
 
 
 
-    <a name="about"></a>
-    <div id="aboutSection">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="heading center">
-                    <h1>About Me</h1>
-                    <h2></h2>
-                </div>
-                
-                <p>Hello! My name is Brandon and I’m a Game Design &amp; Development student at Rochester Institute of Technology (RIT). I strive to write software that leaves a positive impact on people through play or utility. I continuously push myself to work in new situations and environments so I can challenge my abilities and become more versatile.</p>
-                
-                <p>My spare time is usually consumed by reading programming blogs and tech news, but I’m rarely hesitant to get away from the keyboard. I enjoy a variety of activities ranging from playing soccer to mixing music to amateur photography. My favorite break is when I grab a cup of coffee with a friend to discuss a coding problem.</p>
-
-                <p>Send me a message using the options below!</p>
-                
-            </div>
-        </div>
-    </div>
+    
 
 
     <a name="footer"></a>
-    <footer id="footer-section">
+    <footer id="footer" class="section">
         <div class="row">
+
+            <div class="large-4 medium-4 small-12 columns">
+                <p class="text-light">&copy; 2014 Brandon Littell</p>
+            </div>
 
             <div class="large-8 medium-8 small-12 columns">
 
-                <ul class="inline-list center">
+                <ul class="inline-list">
                     <li><a href="https://github.com/BrandonLittell" target="_blank" aria-hidden="true" data-icon="&#xe002;"></a></li>
-                    <li><a href="http://www.linkedin.com/in/brandonlittell/" target="_blank" aria-hidden="true" data-icon="&#xe003;"></a></li>
-                    <li><a href="https://www.facebook.com/brandonalittell" target="_blank" aria-hidden="true" data-icon="&#xe004;"></a></li>
+                    <li><a href="mailto:brandon@brandonlittell.com" target="_blank" aria-hidden="true" data-icon="&#xe007;"></a></li>
                     <li><a href="https://twitter.com/brandon_littell" target="_blank" aria-hidden="true" data-icon="&#xe001;"></a></li>
-                    <li><a href="https://plus.google.com/106967187528547469570/" target="_blank" aria-hidden="true" data-icon="&#xe000;"></a></li>
-                    <li><a href="mailto:brandon.a.littell@gmail.com" target="_blank" aria-hidden="true" data-icon="&#xe007;"></a></li>
+                    <li><a href="https://www.facebook.com/brandonalittell" target="_blank" aria-hidden="true" data-icon="&#xe004;"></a></li>
+                    <li><a href="http://www.linkedin.com/in/brandonlittell/" target="_blank" aria-hidden="true" data-icon="&#xe003;"></a></li>                  
                 </ul>
 
             </div>
 
-            <div class="large-4 medium-4 small-12 columns">
-                <p class="right">&copy; 2014 Brandon Littell</p>
-            </div>
+            
 
         </div>
     </footer>
   
-    <script src="js/foundation.min.js"></script>
-    <script src="js/jscripts.js"
-    <script type='application/javascript' src='js/fastclick.js'></script>
+    <script type='application/javascript' src='js/min/fastclick.min.js'></script>
+    <script src="js/min/particles.min.js"></script>
+    <script src="js/min/jscripts.min.js"></script>
   
     <script>
-        $(document).foundation();
-
         $(document).ready( function() {
-
-        	FastClick.attach(document.body);
-
-        	/*
-        	$(document).on( 'click', function(event) {
-        		//event.preventDefault();
-        		if($(event.target).is('#nav-menu'))
-        			$('#offcanvas-navigation').toggleClass( 'on' );
-        		else if(!$(event.target).closest('#navigation').length)
-        			$('#offcanvas-navigation').toggleClass( 'on', false );
-        	});
-*/
-
-        	
-
-
-        	
-        	$('#nav-menu').click( function(e){
-        		e.preventDefault();
-        		$('#offcanvas-navigation').toggleClass( 'on' );
-        		$('#body-shade').toggleClass('on');
-        	});
-
-        	$('#body-shade').click( function(e){
-        		e.preventDefault();
-        		$('#offcanvas-navigation').toggleClass( 'on' );
-        		$('#body-shade').toggleClass('on');
-        	});
+            FastClick.attach(document.body);
         });
     </script>
 

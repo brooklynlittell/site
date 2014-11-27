@@ -1,41 +1,10 @@
-﻿/*var $cache = $('.stickyPanel');
-var navHeight = $('.top-bar').height() + 20;
-var distance = $cache.offset().top;
-var scrollThreshold = distance - navHeight;
+﻿$(document).ready(function() {
 
-function fixDiv() {
-    
-
-
-
-    if ($cache.length > 0) {
-        //var distance = $cache.length ? $cache.offset().top : 0,
-        //$window = $(window);
-        
-        //alert(navHeight + "   " + distance + "  " + scrollThreshold);
-        //alert(distance);
-        //var offst = this.outerHeight($('.top-bar'));
-       // var offst = 0;
-
-        if ($(window).scrollTop() >= scrollThreshold ) {
-            $cache.css({ 'position': 'fixed', 'top': navHeight });
-            //$('body').css('padding-top', offst);
-        }
-        else {
-            $cache.css({ 'position': 'relative', 'top': 'auto' });
-            //alert('Shiiiiiiiiiit');
-            //$('body').css('padding-top', '0');
-        }
-    }
-}
-$(window).scroll(fixDiv);
-fixDiv();
-*/
-
-$(document).ready(function() {
+    // Navigation fade
+    /*
     $(window).on('scroll', function() {
         var top = $(window).scrollTop();
-        var scrollThreshold = $('#welcomeSection').height();
+        var scrollThreshold = $('#welcome').height() - $('#navigation').height();
         if(top >= scrollThreshold) {
             $('#navigation').toggleClass('alt-colors', true);
         }
@@ -43,6 +12,121 @@ $(document).ready(function() {
             $('#navigation').toggleClass('alt-colors', false);
         }
     });
+    */
 
+    var hideMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on', false);
+        $('#body-shade').toggleClass('on', false);
+        $('#nav-menu').toggleClass('on', false);
+    };
+    var toggleMobileNav = function() {
+        $('#offcanvas-navigation').toggleClass('on');
+        $('#body-shade').toggleClass('on');
+        $('#nav-menu').toggleClass('on');
+    };
+
+    // Mobile Nav Show/Hide
+    $('#nav-menu').click( function(e){
+        e.preventDefault();
+        toggleMobileNav();
+    });
+
+    // Mobile Nav Hide
+    $('#body-shade').click( function(e){
+        e.preventDefault();
+        hideMobileNav();
+    });
+
+    $('#offcanvas-navigation a').click( function(e) {
+        hideMobileNav();
+    });
+
+    var navigationScroll = function(e) {
+        e.preventDefault();
+        var id = $(e.currentTarget).attr('href');
+        var $dest = $(id);
+
+        $('html,body').animate({
+          scrollTop: ($dest.offset().top - $('#navigation').height())
+        }, 200);
+    };
+
+    $('a.inpage').on('click', function (e) {
+        navigationScroll(e);
+    });
+
+
+
+    // Resume Viewer
+    $('#resume-button-bar li a').on('click', function(e) {
+        e.preventDefault();
+
+        var id = $(e.currentTarget).attr('href');
+        var target = $(id);
+
+        $('#resume-button-bar li a').toggleClass('on', false);
+        $(e.currentTarget).toggleClass('on', true);
+        $('#resume .resume .section').toggleClass('on', false);
+        target.toggleClass('on', true);
+    });
+    var initResumeViewer = function() {
+        var initSection = '#resume-experience';
+        $('#resume-button-bar').toggleClass('hidden', false);
+        $('#resume-button-bar li a').toggleClass('on', false);
+        $('#resume .resume .section').toggleClass('on', false);
+
+        $('#resume-button-bar li a[href="' + initSection + '"]').toggleClass('on', true);
+        $(initSection).toggleClass('on', true);
+    };
+
+    initResumeViewer();
     $(window).scrollTop();
+});
+
+/* config dom id (optional) + config particles params */
+particlesJS('particles', {
+  particles: {
+    color: '#4383c1',
+    shape: 'circle', // "circle", "edge" or "triangle"
+    opacity: 1,
+    size: 2.5,
+    size_random: true,
+    nb: 100,
+    line_linked: {
+      enable_auto: true,
+      distance: 100,
+      color: '#444',
+      opacity: 1,
+      width: 1,
+      condensed_mode: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 600
+      }
+    },
+    anim: {
+      enable: true,
+      speed: 1
+    }
+  },
+  interactivity: {
+    enable: false,
+    mouse: {
+      distance: 250
+    },
+    detect_on: 'canvas', // "canvas" or "window"
+    mode: 'grab',
+    line_linked: {
+      opacity: 0.5
+    },
+    events: {
+      onclick: {
+        enable: false,
+        mode: 'push', // "push" or "remove" (particles)
+        nb: 4
+      }
+    }
+  },
+  /* Retina Display Support */
+  retina_detect: true
 });
