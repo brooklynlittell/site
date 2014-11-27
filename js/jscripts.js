@@ -51,12 +51,10 @@
         }, 200);
     };
 
-    $('#navigation a.inpage').on('click', function (e) {
+    $('a.inpage').on('click', function (e) {
         navigationScroll(e);
     });
-    $('#offcanvas-navigation a.inpage').on('click', function (e) {
-        navigationScroll(e);
-    });
+
 
 
     // Resume Viewer

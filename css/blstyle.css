@@ -51,6 +51,13 @@ button.on,
   color: #1d1e20;
   background-color: #ecf0f0;
 }
+p a {
+  color: #1d1e20;
+  text-decoration: underline;
+}
+p a:hover {
+  color: #35373b;
+}
 .margin {
   margin: 0.9375em;
 }
