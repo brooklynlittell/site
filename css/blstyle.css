@@ -522,7 +522,8 @@ p a:hover {
 }
 #about p {
   color: #1d1e20;
-  text-align: justify;
+  text-align: left;
+  padding: 0 0.9375em;
 }
 #about .about-photo {
   text-align: center;
