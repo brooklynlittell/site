@@ -5,12 +5,13 @@
   "author": "Brandon Littell <brandon@brandonlittell.com>",
   "license": "MIT",
   "dependencies": {
-    "semantic-ui": "^2.2.10"
+    "express": "^4.16.2",
+    "gulp": "^3.9.1"
   },
   "engines": {
     "node": ">=6.9.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/app.js"
   }
 }
