@@ -8,10 +8,10 @@ gulp.task('html', function(){
 });
 
 gulp.task('css', function(){
-    return gulp.src('src/views/*.less')
+    return gulp.src('src/views/css/*.less')
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(gulp.dest('build/css'))
 });
 
-gulp.task('default', [ 'css' ]);
+gulp.task('default', [ 'html', 'css' ]);
