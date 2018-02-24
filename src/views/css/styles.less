@@ -28,3 +28,41 @@ h1 {
         text-align: justify;
     }
 }
+
+a {
+    color: #ffffff;
+
+    :hover {
+        color: #ff00ff;
+    }
+}
+
+.inline-list {
+    list-style-type: none;
+    animation: body-move 3s ease infinite;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 6px;
+            font-size: 24px;
+        }
+    }
+}
+@media only screen and (max-width: 400px) {
+
+    .inline-list.stack-for-small {
+        li {
+            display: block;
+
+            a {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
