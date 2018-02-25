@@ -46,6 +46,12 @@ h1 {
     }
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 a {
     color: @textColor;
 
@@ -55,30 +61,29 @@ a {
 }
 
 .inline-list {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
     list-style-type: none;
     padding: 0;
 
     li {
         display: inline-block;
+        flex-grow: 1;
 
         a {
             display: block;
-            padding: 15px;
-            margin: 6px;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 0;
+            margin-left: 5px;
+            margin-right: 5px;
             font-size: 24px;
         }
     }
 }
 @media only screen and (max-width: 400px) {
-
-    .inline-list.stack-for-small {
-        li {
-            display: block;
-
-            a {
-                display: block;
-                width: 100%;
-            }
-        }
-    }
 }
