@@ -1,15 +1,31 @@
+@textColor: #cccccc;
+@linkColor: #4383c1;
+@backgroundColor: #1d1e20;
+
+@openSans: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+@font: @openSans;
+
 body {
-    height: 100%;
-    background: #333333;
+    height: 100vh;
+    background: @backgroundColor;
     margin: 0;
 }
 
 h1 {
     font-size: 44px;
-    font-family: "Open Sans";
+    font-family: @font;
     font-weight: bold;
-    color: #dddddd;
+    color: @textColor;
 }
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
 .flex-container {
     height: 100vh;
@@ -20,34 +36,34 @@ h1 {
 }
 
 #about-me {
-    max-width: 600px;
+    max-width: 500px;
     p {
-        color: #cccccc;
-        font-size: 16px;
-        font-family: "Open Sans";
+        color: @textColor;
+        font-family: @font;
+        font-size: 15px;
+        line-height: 26px;
         text-align: justify;
     }
 }
 
 a {
-    color: #ffffff;
+    color: @textColor;
 
-    :hover {
-        color: #ff00ff;
+    &:hover {
+        color: @linkColor;
     }
 }
 
 .inline-list {
     list-style-type: none;
-    animation: body-move 3s ease infinite;
+    padding: 0;
 
     li {
         display: inline-block;
 
         a {
             display: block;
-            width: 100%;
-            padding: 10px;
+            padding: 15px;
             margin: 6px;
             font-size: 24px;
         }
