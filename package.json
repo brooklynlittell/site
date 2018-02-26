@@ -1,0 +1,19 @@
+{
+  "name": "BrandonLittell.com",
+  "version": "2.0.0",
+  "repository": "https://github.com/BrandonLittell/BrandonLittell.com.git",
+  "author": "Brandon Littell <brandon@brandonlittell.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-less": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "start": "node src/app.js"
+  }
+}
