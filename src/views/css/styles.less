@@ -1,4 +1,4 @@
-@textColor: #cccccc;
+@textColor: #d4d3df;
 @linkColor: #4383c1;
 @backgroundColor: #1d1e20;
 
@@ -19,21 +19,12 @@ h1 {
     color: @textColor;
 }
 
-.no-select {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+a {
+    color: @textColor;
 
-.flex-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    &:hover {
+        color: @linkColor;
+    }
 }
 
 #about-me {
@@ -53,12 +44,21 @@ h1 {
     width: 100%;
 }
 
-a {
-    color: @textColor;
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
-    &:hover {
-        color: @linkColor;
-    }
+.flex-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .inline-list {
@@ -82,6 +82,7 @@ a {
         }
     }
 }
+
 @media only screen and (max-width: 524px) {
     body {
         height: auto;
