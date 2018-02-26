@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    margin: 16px 0px 20px 0px;
     font-size: 44px;
     font-family: @font;
     font-weight: bold;
@@ -75,15 +76,21 @@ a {
             display: block;
             width: 100%;
             text-align: center;
-            padding: 0;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding: 15px 0px;
             margin: 0;
-            margin-left: 5px;
-            margin-right: 5px;
             font-size: 24px;
         }
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 524px) {
+    body {
+        height: auto;
+    }
+
+    .flex-container {
+        height: auto;
+        margin: 0px 12px;
+        align-items: stretch;
+        justify-content: center;
+    }
 }
