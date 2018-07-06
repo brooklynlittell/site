@@ -4,11 +4,11 @@
   "repository": "https://github.com/BrandonLittell/BrandonLittell.com.git",
   "author": "Brandon Littell <brandon@brandonlittell.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "express": "^4.16.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-csso": "^3.0.1",
-    "gulp-less": "^3.5.0"
+    "gulp-less": "^4.0.0"
   },
   "engines": {
     "node": ">=6.9.1"
