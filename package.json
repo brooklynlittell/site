@@ -4,7 +4,7 @@
   "repository": "https://github.com/BrandonLittell/BrandonLittell.com.git",
   "author": "Brandon Littell <brandon@brandonlittell.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.16.2",
     "gulp": "^4.0.0",
     "gulp-csso": "^3.0.1",
