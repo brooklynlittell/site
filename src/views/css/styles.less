@@ -42,7 +42,7 @@ a {
 
 #contact {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
 }
 
@@ -70,28 +70,25 @@ a {
 }
 
 .inline-list {
-    display: flex;
-    width: 100%;
-    max-width: 500px;
     list-style-type: none;
     padding: 0;
+    margin: -10px 0 0 -12px;
 
     li {
         display: inline-block;
-        flex-grow: 1;
 
         a {
             display: block;
-            width: 100%;
+            width: 44px;
             text-align: center;
             padding: 15px 0px;
             margin: 0;
-            font-size: 24px;
+            font-size: 20px;
         }
     }
 }
 
-@media only screen and (max-width: 524px) {
+@media only screen and (max-width: 600px) {
     body {
         height: auto;
     }
