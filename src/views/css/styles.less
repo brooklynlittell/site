@@ -3,7 +3,8 @@
 @backgroundColor: #1d1e20;
 
 @openSans: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
-@font: @openSans;
+@merriweather: 'Merriweather', serif;
+@font: @merriweather;
 
 body {
     height: 100vh;
@@ -88,7 +89,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     body {
         height: auto;
     }
@@ -98,5 +99,9 @@ a {
         margin: 24px 24px;
         align-items: stretch;
         justify-content: center;
+    }
+
+    #about-me {
+        max-width: auto;
     }
 }
