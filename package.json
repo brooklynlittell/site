@@ -5,7 +5,7 @@
   "author": "Brandon Littell <brandon@brandonlittell.com>",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "express": "^4.16.2",
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.2",

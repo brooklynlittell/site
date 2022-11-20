@@ -22,5 +22,4 @@ test/fixtures/**/.fbkpm
 .idea
 yarn.lock
 /build
-package-lock.json
 *.DS_Store
