@@ -30,7 +30,6 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: gulp
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
