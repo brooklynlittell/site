@@ -1,4 +1,4 @@
-@textColor: #d4d3df;
+@textColor: #eeeeee;
 @linkColor: #4383c1;
 @backgroundColor: #1d1e20;
 
@@ -18,6 +18,15 @@ h1 {
     font-family: @font;
     font-weight: bold;
     color: @textColor;
+}
+
+.pronouns::after {
+    display: inline-block;
+    position: relative;
+    content: '(she/they)';
+    font-size: 12px;
+    margin-left: 5px;
+    color: #cccccc;
 }
 
 a {
