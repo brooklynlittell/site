@@ -1,6 +1,7 @@
 @textColor: #eeeeee;
-@linkColor: #4383c1;
-@backgroundColor: #1d1e20;
+@linkColor: #ffc8a3;
+@linkHoverColor: #2a87e4;
+@backgroundColor: #201d1f;
 
 @openSans: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 @merriweather: 'Merriweather', serif;
@@ -14,26 +15,28 @@ body {
 
 h1 {
     margin: 16px 0px 20px 0px;
-    font-size: 32px;
+    font-size: 3em;
     font-family: @font;
     font-weight: bold;
     color: @textColor;
 }
 
-.pronouns::after {
+.pronouns {
     display: inline-block;
     position: relative;
-    content: '(she/they)';
     font-size: 12px;
+    line-height: 12px;
     margin-left: 5px;
     color: #cccccc;
 }
 
 a {
-    color: @textColor;
+    color: @linkColor;
+    font-weight: bold;
+    text-decoration: underline dotted;
 
     &:hover {
-        color: @linkColor;
+        color: @linkHoverColor;
     }
 }
 
@@ -54,11 +57,43 @@ a {
     display: flex;
     justify-content: left;
     width: 100%;
+    margin: 36px 0 12px 0;
 }
 
-#profile {
+#welcome {
+    position: relative;
+    display: block;
+    height: 200px;
+    margin: 0 0 24px 0;
+}
+
+.profile-section {
+    width: 200px;
+    height: auto;
+    display: block;
+    position: relative;
+    float: right;
+}
+
+.profile-picture {
     border-radius: 40%;
-    vertical-align: middle;
+    width: 200px;
+}
+
+.profile-emoji {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+}
+
+.greeting {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 350px;
 }
 
 .no-select {
@@ -71,12 +106,9 @@ a {
 }
 
 .flex-container {
-    height: 100vh;
     display: flex;
-    margin: 0px 24px;
+    padding: 24px;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .inline-list {
@@ -89,7 +121,7 @@ a {
 
         a {
             display: block;
-            width: 44px;
+            width: 60px;
             text-align: center;
             padding: 15px 0px;
             margin: 0;
@@ -104,13 +136,32 @@ a {
     }
 
     .flex-container {
-        height: auto;
-        margin: 24px 24px;
         align-items: stretch;
         justify-content: center;
     }
 
     #about-me {
         max-width: auto;
+    }
+
+    .profile-section {
+        float: unset;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        height: auto;
+    }
+    
+    .greeting {
+        margin: 36px 0;
+        position: relative;
+        text-align: center;
+        max-width: unset;
+        transform: none;
+    }
+
+    .pronouns {
+        display: block;
     }
 }
