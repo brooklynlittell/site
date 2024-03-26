@@ -1,5 +1,6 @@
 @textColor: #eeeeee;
-@linkColor: #4383c1;
+@linkColor: #ffc8a3;
+@linkHoverColor: #2a87e4;
 @backgroundColor: #1d1e20;
 
 @openSans: 'Open Sans', Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
@@ -31,9 +32,11 @@ h1 {
 
 a {
     color: @linkColor;
+    font-weight: bold;
+    text-decoration: underline dotted;
 
     &:hover {
-        color: @linkColor;
+        color: @linkHoverColor;
     }
 }
 
