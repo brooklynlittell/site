@@ -1,8 +1,8 @@
 {
   "name": "site",
-  "version": "2.0.0",
-  "repository": "https://github.com/BrandonLittell/site.git",
-  "author": "Brandon Littell <brandon@brandonlittell.com>",
+  "version": "2.0.1",
+  "repository": "https://github.com/BrooklynLittell/site.git",
+  "author": "Brooklyn Littell <b@blittell.com>",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.27.11",
